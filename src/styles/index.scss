@@ -1,0 +1,245 @@
+@import "reset";
+a{
+    text-decoration: none;
+    color:#1cade9;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #555;
+
+    background-color: #eeeeee;
+
+    .header {
+        background: #1cade9;
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        height:200px;
+        
+
+        .header__content{
+            width:100%;
+            height:100px;
+            max-width:600px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .site-logo{
+                margin-top:20px;
+                width:135px;
+                height:35px;
+                background: url('/images/logo.png');
+                background-size: cover;
+                background-position: center center;
+                overflow:hidden;
+
+                a{  
+                    display:block;
+                    height:100%;
+                    width:100%;
+                    opacity: 0;
+                }
+            }
+
+            .site-menu{
+                min-height:35px;
+
+                .site-menu__toggle{
+                    display:none;
+                }
+                .site-menu__list{
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    list-style:none;
+                    margin-top:5px;
+
+                    li{
+                        margin-right:20px;
+                        a{
+                            text-decoration: none;
+                            color:#fff;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:600px){
+        .hidden{
+            display:none !important;
+        }
+
+        .header{
+
+            .header__content{
+                position:relative;
+
+                .site-logo{
+                    margin-left:20px;
+                }
+
+                .site-menu{
+                    .site-menu__toggle{
+                        display: block;
+                        margin-right:20px;
+                        background: url('/images/menu.gif');
+                        background-size: cover;
+                        background-position: center center;
+                        background-color:#1cade9;
+                        border:0px;
+                        width:30px;
+                        height:20px;
+                        margin-top:6px;
+                    }
+                    .site-menu__list{
+                        position: absolute;
+                        top:90px;
+                        left:0px;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        z-index: 10;
+                        background: #1cade9;
+                        width:100%;
+                        padding:20px;
+                        
+                        li{
+                            text-align: left;
+                            width:100%;
+                            height:50px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding: 0px 20px;
+                            font-weight: bolder;
+                        }
+
+                        :hover{
+                            background: #168aba;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+    }
+
+    .container{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .content{
+            position:relative;
+            top:-100px;
+            max-width:600px;
+            width:100%;
+            padding:0px 20px;
+            min-height:20px;
+            background: #fff;
+            box-sizing: border-box;
+
+            .tweet-item{
+                padding:20px 0px;
+                width:100%;
+                border-bottom:1px solid #eee;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                .tweet-item__tweet-image{
+                    width:50px;
+                    height:50px;
+                    margin-right:10px;
+                }
+
+                .tweet-item__tweet-info{
+                    width:90%;
+                    
+                    .tweet-info__user{
+                        width:100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        max-height:18px;
+                        line-height: 14px;
+
+                        .username{
+                            text-transform:uppercase;
+                            font-family: Arial, Helvetica, sans-serif;
+                            font-weight: bold;
+                            margin-right:5px;
+                            font-size: 14px;
+                            color:#000;
+                            text-decoration: none;
+                        
+                        }
+    
+                        .nick {
+                            color:#777777 !important;
+                            font-size: 14px;
+                            text-decoration: none;
+                            
+                        }
+
+                        .date{
+                            justify-content: right;
+                            width:35%;
+                            text-align: right;
+                            color:#777777;
+                            font-size: 14px;
+                            display: inline-block;
+                            font-style: italic;
+                        }
+
+                    }
+
+                    .tweet-info__text{
+                        font-size:14px;
+                        line-height: 1.4;
+                    
+                    }   
+                  
+                }
+            
+            }
+           
+        }
+
+        .date-format{
+            width:100%;
+            text-align: center;
+            margin-bottom:20px;
+            position:relative;
+            top:-25px;
+
+            .date-format__title{
+                margin-bottom:0px;
+
+            }
+
+            .date-format__title{
+
+            }
+        }
+
+        @media(max-width:600px){
+            .date-format{
+                top:-45px;
+            }
+        }
+    }
+
+}
+
