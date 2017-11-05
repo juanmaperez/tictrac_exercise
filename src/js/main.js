@@ -117,10 +117,12 @@ $(document).ready(()=>{
 
     function getTweets(){
         $('.content').empty();
-        mytweets.forEach((tweet)=>{
-            var newTweet = createHtml(tweet);
-            printingTweet(newTweet);
-    //        console.log(newTweet)
+        mytweets.forEach((tweet, idx)=>{
+            if(idx < 5){
+                var newTweet = createHtml(tweet);
+                printingTweet(newTweet);
+            }
+         
         })
 
     }
