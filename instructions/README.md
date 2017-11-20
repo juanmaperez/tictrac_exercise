@@ -1,4 +1,4 @@
-# Tictrac Web Developer Test
+# Web Developer Test
 
 ## Brief
 
